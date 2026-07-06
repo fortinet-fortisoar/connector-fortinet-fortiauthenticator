@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2022 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2026 Fortinet Inc
+Copyright end
+"""
 
 import requests, json
 import base64
@@ -162,6 +163,14 @@ def get_userlockout_policy(config, params):
     fa = FortiAuthenticator(config)
     return fa.make_api_call(endpoint='api/v1/userlockoutpolicy/')
 
+def execute_an_api_request(config, params):
+    fa = FortiAuthenticator(config)
+    endpoint = params.get("endpoint")
+    http_method = params.get("method")
+    query_params = params.get("params") if params.get("params") else None
+    payload = json.dumps(params.get("data")) if params.get("data") else None
+    response = fa.make_api_call(endpoint, data=payload, params=query_params, method=http_method)
+    return response
 
 operations = {
     'get_schema': get_schema,
@@ -175,5 +184,6 @@ operations = {
     'get_radius_user_list': get_radius_user_list,
     'get_radius_user': get_radius_user,
     'update_radiususer_status': update_radiususer_status,
-    'get_userlockout_policy': get_userlockout_policy
+    'get_userlockout_policy': get_userlockout_policy,
+    'execute_an_api_request': execute_an_api_request
 }
