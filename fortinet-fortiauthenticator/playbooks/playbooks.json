@@ -3,15 +3,18 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Fortinet FortiAuthenticator - 1.0.0",
+      "name": "Sample - Fortinet FortiAuthenticator - 1.1.0",
       "description": "Sample playbooks for \"Fortinet FortiAuthenticator\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": null,
       "uuid": "fc91566d-db28-42a1-8f02-b0b89fb53299",
-      "id": 69,
+      "id": 125,
       "deletedAt": null,
       "importedBy": [],
-      "recordTags": [],
+      "recordTags": [
+        "Fortinet",
+        "fortinet-fortiauthenticator"
+      ],
       "workflows": [
         {
           "@type": "Workflow",
@@ -31,6 +34,28 @@
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/44413336-b4df-493f-b25f-fdb059687fa2",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Local User List",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_users",
+                "operationTitle": "Get Local Users",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "e82caa1f-6c7d-4b07-a70e-542bbfb8c073"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -58,28 +83,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "44413336-b4df-493f-b25f-fdb059687fa2"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Local User List",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_users",
-                "operationTitle": "Get Local Users",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "e82caa1f-6c7d-4b07-a70e-542bbfb8c073"
             }
           ],
           "routes": [
@@ -90,13 +93,16 @@
               "sourceStep": "/api/3/workflow_steps/44413336-b4df-493f-b25f-fdb059687fa2",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "fbe5b9a4-7536-4f28-bd8e-b39384ffcb79"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "003033ae-91aa-4de6-9a53-3c67c9c23988",
-          "id": 792,
+          "id": 2127,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -163,7 +169,7 @@
                   "active": true,
                   "userid": "1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "fortinet-fortiauthenticator",
                 "operation": "update_radiususer_status",
                 "operationTitle": "Update Radius User Status",
@@ -186,13 +192,16 @@
               "sourceStep": "/api/3/workflow_steps/bcf6ba07-f4ac-4a77-8d2c-e17733fe1219",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "c9ee0985-5774-4b3d-8737-721b88c2b362"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "1b21278f-63ae-45ce-a860-040d9c0a71a1",
-          "id": 793,
+          "id": 2128,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -222,6 +231,28 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Get LDAP User List",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_ldap_user_list",
+                "operationTitle": "Get LDAP User List",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "5941cc46-eba3-4932-8c9e-1a727ca2db7e"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -247,28 +278,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "272b7ad2-be86-4f0f-a03a-6aad8cca06e4"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get LDAP User List",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_ldap_user_list",
-                "operationTitle": "Get LDAP User List",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "5941cc46-eba3-4932-8c9e-1a727ca2db7e"
             }
           ],
           "routes": [
@@ -279,13 +288,16 @@
               "sourceStep": "/api/3/workflow_steps/272b7ad2-be86-4f0f-a03a-6aad8cca06e4",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "cca16dc0-4374-4b24-9efd-d14bc9043a0b"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "4125916c-875c-45dc-aeaa-42099c4efb7a",
-          "id": 794,
+          "id": 2129,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -315,6 +327,28 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Get Specific Radius User",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_radius_user",
+                "operationTitle": "Get Specific Radius User",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "58d79cde-2157-4e05-b60b-bd0089b46e41"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -340,28 +374,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "58e225a2-ed1f-4733-89a6-98f4776c66fb"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Specific Radius User",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_radius_user",
-                "operationTitle": "Get Specific Radius User",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "58d79cde-2157-4e05-b60b-bd0089b46e41"
             }
           ],
           "routes": [
@@ -372,13 +384,16 @@
               "sourceStep": "/api/3/workflow_steps/58e225a2-ed1f-4733-89a6-98f4776c66fb",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "05b5bc26-e53a-4af7-aa86-71a40c256cd5"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "4416124b-2ab6-4d9a-8492-945255624680",
-          "id": 795,
+          "id": 2130,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -408,6 +423,35 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Create Local User",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": {
+                  "email": "admin@example.com",
+                  "active": true,
+                  "password": "changeme",
+                  "username": "admin",
+                  "last_name": "lastname",
+                  "first_name": "firstname"
+                },
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "create_local_user",
+                "operationTitle": "Create Local User",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "c8268fe6-91b9-4d24-898c-51c7059c98e0"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -433,35 +477,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "837ee1a7-f930-4e31-859e-649487d45ee1"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Create Local User",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": {
-                  "email": "admin@example.com",
-                  "active": true,
-                  "password": "changeme",
-                  "username": "admin",
-                  "last_name": "lastname",
-                  "first_name": "firstname"
-                },
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "create_local_user",
-                "operationTitle": "Create Local User",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "c8268fe6-91b9-4d24-898c-51c7059c98e0"
             }
           ],
           "routes": [
@@ -472,13 +487,16 @@
               "sourceStep": "/api/3/workflow_steps/837ee1a7-f930-4e31-859e-649487d45ee1",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "74abc22b-b012-4739-bc35-c28c387027a9"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "5f0231dc-5d8a-4d6b-842e-af25ad2b2313",
-          "id": 796,
+          "id": 2131,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -545,7 +563,7 @@
                   "active": true,
                   "userid": "1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "fortinet-fortiauthenticator",
                 "operation": "update_user_status",
                 "operationTitle": "Update Local User Status",
@@ -568,13 +586,16 @@
               "sourceStep": "/api/3/workflow_steps/9857a4f1-f6fd-40e0-a972-db255e97f66a",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "968fa27a-a2f4-4d97-afa4-29b5c9206046"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "9c900588-0bb3-4d5a-8b2c-99ffa59788dd",
-          "id": 797,
+          "id": 2132,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -597,11 +618,33 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1652266397,
+          "lastModifyDate": 1782976460,
           "collection": "/api/3/workflow_collections/fc91566d-db28-42a1-8f02-b0b89fb53299",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/12c5b0ad-8176-4fb7-85e2-3c7818fafcc3",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get User Lockout Policy Info",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "9a196f7d-8dd7-4fe6-92fd-4e2411a0f8c0",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_userlockout_policy",
+                "operationTitle": "Get User Lockout Policy Info",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "798c4e0c-e53d-43ce-9b65-7b2c8222f8a3"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -629,28 +672,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "12c5b0ad-8176-4fb7-85e2-3c7818fafcc3"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get User Lockout Policy Info",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_userlockout_policy",
-                "operationTitle": "Get User Lockout Policy Info",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "798c4e0c-e53d-43ce-9b65-7b2c8222f8a3"
             }
           ],
           "routes": [
@@ -661,13 +682,110 @@
               "sourceStep": "/api/3/workflow_steps/12c5b0ad-8176-4fb7-85e2-3c7818fafcc3",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "342cab12-ff6a-4f62-9cf9-c5be155a3cd7"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "b45a6369-4d41-4916-a0b7-979b16c23113",
-          "id": 798,
+          "id": 2133,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Fortinet",
+            "fortinet-fortiauthenticator"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Execute an API Request",
+          "aliasName": null,
+          "tag": null,
+          "description": "Sends an API request to any API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1782977941,
+          "collection": "/api/3/workflow_collections/fc91566d-db28-42a1-8f02-b0b89fb53299",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/f2f8f2f1-4352-4b1b-bc3b-be03bfb00688",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Execute an API Request",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "9a196f7d-8dd7-4fe6-92fd-4e2411a0f8c0",
+                "params": {
+                  "data": "{}",
+                  "method": "GET",
+                  "params": "",
+                  "endpoint": "api/v1/"
+                },
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "execute_an_api_request",
+                "operationTitle": "Execute an API Request",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "79bad9b5-b525-423e-b9be-9acbea2c5200"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+              },
+              "status": null,
+              "top": "30",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "f2f8f2f1-4352-4b1b-bc3b-be03bfb00688"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Execute an API Request",
+              "targetStep": "/api/3/workflow_steps/79bad9b5-b525-423e-b9be-9acbea2c5200",
+              "sourceStep": "/api/3/workflow_steps/f2f8f2f1-4352-4b1b-bc3b-be03bfb00688",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "5e3136e7-fe42-4b61-abbb-c52f7efd8a0f"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "c1d07fc3-0389-411b-9a6f-8ea733b4a64c",
+          "id": 2139,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -697,6 +815,31 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Get Specific Local User",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": {
+                  "id": "1",
+                  "output_mode": "ID"
+                },
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_local_user",
+                "operationTitle": "Get Specific Local User",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "7df0542d-d3cc-43e1-9500-acc771c74d9f"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -722,31 +865,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "84d55339-d765-4bd0-8739-ed2adc03bf14"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Specific Local User",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": {
-                  "id": "1",
-                  "output_mode": "ID"
-                },
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_local_user",
-                "operationTitle": "Get Specific Local User",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "7df0542d-d3cc-43e1-9500-acc771c74d9f"
             }
           ],
           "routes": [
@@ -757,13 +875,16 @@
               "sourceStep": "/api/3/workflow_steps/84d55339-d765-4bd0-8739-ed2adc03bf14",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "663abd88-f4fc-4c85-800e-0f2d9423f862"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "cdc75344-1eb2-411a-be6c-c93b9d76ca9b",
-          "id": 799,
+          "id": 2134,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -793,6 +914,28 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Get Radius User List",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_radius_user_list",
+                "operationTitle": "Get Radius User List",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "8c931c0c-1a11-4cf8-8dc9-ce3243d6dce8"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -818,28 +961,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "07030e35-5866-4107-a7df-2de654a0bdcb"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Radius User List",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_radius_user_list",
-                "operationTitle": "Get Radius User List",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "8c931c0c-1a11-4cf8-8dc9-ce3243d6dce8"
             }
           ],
           "routes": [
@@ -850,13 +971,16 @@
               "sourceStep": "/api/3/workflow_steps/07030e35-5866-4107-a7df-2de654a0bdcb",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "b7374aa1-69d7-4e3f-9150-85d7fc858916"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "e7114213-4689-4e43-a205-f541542c1246",
-          "id": 800,
+          "id": 2135,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -879,11 +1003,33 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1652263706,
+          "lastModifyDate": 1782976453,
           "collection": "/api/3/workflow_collections/fc91566d-db28-42a1-8f02-b0b89fb53299",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/6bf4a02d-8cbe-4926-befe-ed7470b177ea",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Schema",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "9a196f7d-8dd7-4fe6-92fd-4e2411a0f8c0",
+                "params": [],
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_schema",
+                "operationTitle": "Get Schema",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "3eb16484-e413-415d-9c62-47b7dbf91d07"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -911,28 +1057,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "6bf4a02d-8cbe-4926-befe-ed7470b177ea"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Schema",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": [],
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_schema",
-                "operationTitle": "Get Schema",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "3eb16484-e413-415d-9c62-47b7dbf91d07"
             }
           ],
           "routes": [
@@ -943,13 +1067,16 @@
               "sourceStep": "/api/3/workflow_steps/6bf4a02d-8cbe-4926-befe-ed7470b177ea",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "2a0f43a2-901e-4e1d-ac23-9e69d335169e"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "e8c2ce1e-108b-42e0-8904-55c9b56d439a",
-          "id": 801,
+          "id": 2136,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -979,6 +1106,31 @@
           "steps": [
             {
               "@type": "WorkflowStep",
+              "name": "Get Specific LDAP User",
+              "description": null,
+              "arguments": {
+                "name": "Fortinet FortiAuthenticator",
+                "config": "",
+                "params": {
+                  "id": "1",
+                  "output_mode": "ID"
+                },
+                "version": "1.1.0",
+                "connector": "fortinet-fortiauthenticator",
+                "operation": "get_ldap_user",
+                "operationTitle": "Get Specific LDAP User",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "4c1741b1-36d6-445a-91ca-1fc2b47f2842"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "arguments": {
@@ -1004,31 +1156,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "6747d648-3b81-455e-8581-57f5c4082ec9"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Specific LDAP User",
-              "description": null,
-              "arguments": {
-                "name": "Fortinet FortiAuthenticator",
-                "config": "",
-                "params": {
-                  "id": "1",
-                  "output_mode": "ID"
-                },
-                "version": "1.0.0",
-                "connector": "fortinet-fortiauthenticator",
-                "operation": "get_ldap_user",
-                "operationTitle": "Get Specific LDAP User",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "4c1741b1-36d6-445a-91ca-1fc2b47f2842"
             }
           ],
           "routes": [
@@ -1039,13 +1166,16 @@
               "sourceStep": "/api/3/workflow_steps/6747d648-3b81-455e-8581-57f5c4082ec9",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "0f7ca206-69b0-49fc-9e85-7515361867d1"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "f7f38fc4-d4a0-4be3-9488-e0bdd0d84dad",
-          "id": 802,
+          "id": 2137,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1112,7 +1242,7 @@
                   "active": true,
                   "userid": "1"
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "fortinet-fortiauthenticator",
                 "operation": "update_ldapuser_status",
                 "operationTitle": "Update LDAP User Status",
@@ -1135,13 +1265,16 @@
               "sourceStep": "/api/3/workflow_steps/1dd19c12-7bda-430c-b3ed-75c7a8ff221f",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "7e6bfb86-9a60-4275-af18-6f84c700dd92"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
           "uuid": "fa846466-9457-4c8f-ba1f-01bc744a63d5",
-          "id": 803,
+          "id": 2138,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
