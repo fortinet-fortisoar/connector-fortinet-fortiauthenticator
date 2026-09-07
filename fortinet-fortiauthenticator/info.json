@@ -9,7 +9,7 @@
   "category": "Authentication",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.1.0/fortinet-fortiauthenticator/110/fortinet-fortiauthenticator-v1-1-0",
   "configuration": {
     "fields": [
       {
@@ -19,7 +19,8 @@
         "description": "Specify the URL of the Fortinet FortiAuthenticator server to which you will connect and perform automated operations.",
         "required": true,
         "editable": true,
-        "visible": true
+        "visible": true,
+        "tooltip": "Specify the URL of the Fortinet FortiAuthenticator server to which you will connect and perform automated operations."
       },
       {
         "title": "Username",
@@ -28,7 +29,8 @@
         "description": "Specify the Username used to access the Fortinet FortiAuthenticator server to which you will connect and perform the automated operations.",
         "required": true,
         "editable": true,
-        "visible": true
+        "visible": true,
+        "tooltip": "Specify the Username used to access the Fortinet FortiAuthenticator server to which you will connect and perform the automated operations."
       },
       {
         "title": "API Key",
@@ -37,7 +39,8 @@
         "description": "Specify the API key configured for your account for using the Fortinet FortiAuthenticator APIs.",
         "required": true,
         "editable": true,
-        "visible": true
+        "visible": true,
+        "tooltip": "Specify the API key configured for your account for using the Fortinet FortiAuthenticator APIs."
       },
       {
         "title": "Verify SSL",
@@ -47,7 +50,8 @@
         "required": false,
         "editable": true,
         "visible": true,
-        "value": true
+        "value": true,
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not."
       }
     ]
   },
@@ -1149,7 +1153,7 @@
       "operation": "execute_an_api_request",
       "title": "Execute an API Request",
       "annotation": "execute_an_api_request",
-      "description": "Sends an API request to any API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs.",
+      "description": "Sends an API request to the specified endpoint using the selected HTTP method and request parameters, enabling flexible API interactions based on your requirements.",
       "category": "investigation",
       "visible": true,
       "enabled": true,
@@ -1161,7 +1165,8 @@
           "editable": true,
           "visible": true,
           "required": true,
-          "description": "Select an HTTP action for the request. You can select from the following options: DELETE GET PATCH POST PUT",
+          "description": "Select the HTTP method for the request. Available methods are DELETE, GET, PATCH, POST, and PUT.",
+          "tooltip": "Select the HTTP method for the request. Available methods are DELETE, GET, PATCH, POST, and PUT.",
           "options": [
             "DELETE",
             "GET",
@@ -1173,8 +1178,8 @@
         {
           "title": "Endpoint",
           "name": "endpoint",
-          "tooltip": "Specify the target API URL path for request.",
-          "description": "Specify the target API URL path for the request. For example, if the website is https://example.com and URL path is https://example.com/api/v2/incidents/search, the endpoint would be /api/v2/incidents/search.",
+          "tooltip": "Specify the API endpoint path for the request. For example, if the full URL is https://example.com/api/v2/incidents/search, enter api/v2/incidents/search as the endpoint.",
+          "description": "Specify the API endpoint path for the request. For example, if the full URL is https://example.com/api/v2/incidents/search, enter api/v2/incidents/search as the endpoint.",
           "type": "text",
           "placeholder": "api/v1/userlockoutpolicy/",
           "visible": true,
@@ -1184,7 +1189,8 @@
         {
           "title": "Query Parameters",
           "name": "params",
-          "description": "(Optional) Specify any optional parameters to add to the URL and refine the request.",
+          "description": "(Optional) Specify parameters to append to the URL and refine the request.",
+          "tooltip": "Specify parameters to append to the URL and refine the request.",
           "type": "json",
           "visible": true,
           "editable": true,
@@ -1197,7 +1203,8 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "(Optional) Specify data, as JSON, to be sent as the request payload (typically for POST or PUT requests)."
+          "description": "(Optional) Specify the request data in JSON format. This is typically used with POST, or PUT requests.",
+          "tooltip": "Specify the request data in JSON format. This is typically used with POST or PUT requests."
         }
       ],
       "output_schema": {}
