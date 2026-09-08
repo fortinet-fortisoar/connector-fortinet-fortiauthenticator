@@ -42,7 +42,7 @@ class FortiAuthenticator(object):
                 return response.json()
             else:
                 logger.error(response.text)
-                raise ConnectorError({'status_code': response.status_code, 'message': response.reason})
+                raise ConnectorError({'status_code': response.status_code, 'message': response.text})
         except requests.exceptions.SSLError:
             raise ConnectorError('SSL certificate validation failed')
         except requests.exceptions.ConnectTimeout:
